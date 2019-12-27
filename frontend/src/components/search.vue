@@ -8,7 +8,7 @@
             {{ option.text }}
         </option>
     </select>
-    <label>该表格对应的自然语言问题:</label>
+    <label v-show="retItems.length">该表格对应的自然语言问题:</label>
     <select v-model="selectedNL" class="SelectNL" v-show="retItems.length">
         <option disabled value="">请选择自然语言问题</option>
         <option v-for="question in questionListShow" v-bind:value="question.value" class="options">
